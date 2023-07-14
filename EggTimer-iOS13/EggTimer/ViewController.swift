@@ -40,6 +40,7 @@ class ViewController: UIViewController {
             totalNum = result
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(fire), userInfo: nil, repeats: true)
 
+            
         }
         
 
