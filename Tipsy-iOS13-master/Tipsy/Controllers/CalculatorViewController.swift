@@ -24,6 +24,8 @@ class CalculatorViewController: UIViewController {
     var billTotal = 0.0
     var resultToDeciamlPlaces = "0.0"
     
+    
+    
     @IBAction func tipChanged(_ sender: UIButton) {
         
         billTextField.endEditing(true)
@@ -71,6 +73,7 @@ class CalculatorViewController: UIViewController {
         }
     }
     
-    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 }
-

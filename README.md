@@ -1,6 +1,17 @@
 # Study_Swift_Angela
 # 공부한 것들 
 
+## Tipsy 
+- textField에 입력후 다른 곳을 눌렀을 때 키보드가 내려가도록 적용해봄
+```swift
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    } 
+```
+- 근데 키보드가 좀 느리게 작동한다. 왜지??
+
+
+
 ## BMI Calculator
 - class and Inheritance
 - struct vs class
