@@ -40,7 +40,72 @@ extension WeatherViewController: CLLocationManagerDelegate {
     }
 }
 ```
-- API 키 처리하기 
+- API_Key 처리하기
+    - .plist파일 생성
+        - 원하는 이름의 Key값과 키를 Value에 넣어준다
+    - 코드 입력
+        
+        ```swift
+        extension Bundle {
+            
+            var apiKey: String {
+                // forResource에다 plist 파일 이름을 입력해주세요.
+                guard let filePath = Bundle.main.path(forResource: "plist이름", ofType: "plist"),
+                      let plistDict = NSDictionary(contentsOfFile: filePath) else {
+                    fatalError("Couldn't find file 'SecureAPIKeys.plist'.")
+                }
+                
+                // plist 안쪽에 사용할 Key값을 입력해주세요.
+                guard let value = plistDict.object(forKey: "API_KEY") as? String else {
+                    fatalError("Couldn't find key 'API_Key' in 'SecureAPIKeys.plist'.")
+                }
+                
+                // 또는 키 값을 통해 직접적으로 불러줄 수도 있어요.
+                // guard let value = plistDict["API_KEY"] as? String else {
+                //     fatalError("Couldn't find key 'API_Key' in 'SecureAPIKeys.plist'.")
+                // }
+                
+                return value
+            }
+        }
+        ```
+        
+        - 왜 Bundle 익스텐션으로 생성하는가
+            
+            **NSBundle이란**
+            
+            `Bundle`에 포함된 코드와 리소스에 대한 표현
+            
+            `NSBundle`은 `ObjectiveC`를 통해 만들어진 Foundation Class이며
+            
+            `Bundle` 디렉터리 안에 포함된 리소스에 쉽게 접근할 수 있도록 제공되는 객체입니다.
+            
+            **Bundle.main이란**
+            
+            앱 실행 시 기본적으로 main bundle이 생성이 됩니다.
+            
+            main bundle == `Bundle.main`
+            
+            main bundle은 현재 앱이 실행중일 때 앱의 Bundle Directory에 대한 리소스에 접근할 수 있게 도와주는 놈.
+            
+            앱 실행시 `plist`는 메모리에 올라간 상태입니다.
+            
+            그러므로 `path`로 접근하면 `plist`의 파일의 리소스(값)를 사용할 수 있는거죠.
+            
+            즉, `Bundle`로 `plist`에 접근이 가능하므로 `Bundle` 익스텐션을 사용!
+            
+    - 코드 사용
+        
+        ```swift
+        let appKey = Bundle.main.apiKey
+        ```
+        
+    - gitignore로 plist 숨기기
+        - 적용할 폴더 접근 후 `touch .gitignore`를 통해 `gitignore`를 생성해 줍니다.
+        - gitignore 파일 안에 해당 파일 이름 적용
+    
+    [[iOS/Swift] plist의 값 얻는 방법 및 Github에서 중요한 정보 숨기는 방법(API Key, Bundle, gitignore)](https://ios-daniel-yang.tistory.com/56)
+
 
 ## Tipsy 
 - textField에 입력후 다른 곳을 눌렀을 때 키보드가 내려가도록 적용해봄
