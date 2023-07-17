@@ -2,6 +2,8 @@
 # 공부한 것들 
 
 ## Clima
+<img src="https://github.com/ryan2414/Study_Swift_Angela/assets/75060346/28e91929-dbee-48b6-abcb-6df4275c9ae8" width="25%" height="25%">
+
 - Location 정보 가져오기
     
 ```swift
@@ -108,6 +110,8 @@ extension WeatherViewController: CLLocationManagerDelegate {
 
 
 ## Tipsy 
+<img src="https://github.com/ryan2414/Study_Swift_Angela/assets/75060346/c921dcd2-c254-415d-82ea-beb01789c656" width="25%" height="25%">
+
 - textField에 입력후 다른 곳을 눌렀을 때 키보드가 내려가도록 적용해봄
 ```swift
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -119,6 +123,8 @@ extension WeatherViewController: CLLocationManagerDelegate {
 
 
 ## BMI Calculator
+<img src="https://github.com/ryan2414/Study_Swift_Angela/assets/75060346/a636568c-fe2b-41fe-b93f-ef3a14a74810" width="25%" height="25%">
+
 - class and Inheritance
 - struct vs class
 - screen Change
@@ -144,19 +150,30 @@ extension WeatherViewController: CLLocationManagerDelegate {
     }
     ```
 - Optional Binding, Chaining, Nil Coalescing Operator
-    
+
+
+## Destini
+<img src="https://github.com/ryan2414/Study_Swift_Angela/assets/75060346/dbed2d4e-7f51-47b2-bbf2-899143c20c99" width="25%" height="25%">
+
 
 ## Quizzler
+<img src="https://github.com/ryan2414/Study_Swift_Angela/assets/75060346/be5c9167-d836-4fc0-b4bc-475a105b85ad" width="25%" height="25%">
+
 - Structure
 - MVC Pattern
 - Functions with Outputs and Return Types
 - Immutability
 
+
 ## EggTimer
+<img src="https://github.com/ryan2414/Study_Swift_Angela/assets/75060346/52e2a8e2-23f9-4113-a861-e8b452631edb" width="25%" height="25%">
+
 - If-Else / Switch
 - Optionals
 - Dictionary
 
 
 ## Xylophone
+<img src="https://github.com/ryan2414/Study_Swift_Angela/assets/75060346/22539b6e-04db-48ab-aace-8c307557bace" width="25%" height="25%">
+
 - Study Functions and Scope
