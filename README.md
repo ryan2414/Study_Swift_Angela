@@ -2,6 +2,12 @@
 # 공부한 것들 
 
 
+## I Am Rich
+<img src="https://github.com/ryan2414/Study_Swift_Angela/assets/75060346/ae5f8fda-4e1a-4526-9938-5343ad09acf0" width="25%" height="25%">
+
+- 첫 SwiftUI Project
+
+
 ## Flash Chat
 <img src="https://github.com/ryan2414/Study_Swift_Angela/assets/75060346/0be938fd-cd17-49f0-9ac0-a588f5dfbefb" width="25%" height="25%">
 
