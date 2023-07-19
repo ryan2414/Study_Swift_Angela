@@ -1,6 +1,16 @@
 # Study_Swift_Angela
 # 공부한 것들 
 
+
+## Flash Chat
+<img src="https://github.com/ryan2414/Study_Swift_Angela/assets/75060346/0be938fd-cd17-49f0-9ac0-a588f5dfbefb" width="25%" height="25%">
+
+- Cocoapod과 Swift Package Manager를 활용한 라이브러리 추가
+- FireBase를 사용한 회원가입, 로그인 기능 구현
+- FireStore를 사용한 채팅 내용 서버 저장
+- TableView, Xib
+
+
 ## ByteCoin
 <img src="https://github.com/ryan2414/Study_Swift_Angela/assets/75060346/15fc0422-3ab7-4dfa-bdd4-1fc72959f185" width="25%" height="25%">
 
