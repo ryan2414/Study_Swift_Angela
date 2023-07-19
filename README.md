@@ -1,6 +1,15 @@
 # Study_Swift_Angela
 # 공부한 것들 
 
+## Name Card
+<img src="https://github.com/ryan2414/Study_Swift_Angela/assets/75060346/33dc21b6-4340-4351-949f-c0eb582381a6" width="25%" height="25%">
+
+- SwiftUI
+    - Font 추가 하기 
+        [How to use custom fonts with SwiftUI | Sarunw](https://sarunw.com/posts/swiftui-custom-font/#register-your-font-file-with-ios)
+- App Icon 추가하기
+    [SwiftUI : App Icon](https://seons-dev.tistory.com/entry/SwiftUI-App-Icon)
+
 
 ## I Am Rich
 <img src="https://github.com/ryan2414/Study_Swift_Angela/assets/75060346/ae5f8fda-4e1a-4526-9938-5343ad09acf0" width="25%" height="25%">
