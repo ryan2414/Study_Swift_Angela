@@ -1,6 +1,57 @@
 # Study_Swift_Angela
 # 공부한 것들 
 
+## Dicee
+<img src="https://github.com/ryan2414/ryan2414/assets/75060346/781bf801-c9f2-4151-9faf-dcef6db83e1d" width="25%" height="25%">
+
+- 특정 변수 변경할 때
+    
+    @State를 변수 앞에 붙여준다. 변수가 수정되면 자동으로 사용하는 UI를 초기화 해줌 
+    
+    ```swift
+    struct ContentView: View {
+        
+        @State var leftDiceNumber = 1 //⭐️⭐️⭐️⭐️⭐️
+        @State var rightDiceNumber = 1 //⭐️⭐️⭐️⭐️⭐️
+        
+        var body: some View {
+            VStack {
+                ZStack {
+                    Image("background")
+                        .resizable()
+                        .edgesIgnoringSafeArea(.all)
+                    
+                    VStack {
+                        Image("diceeLogo")
+                        Spacer()
+                        HStack {
+                            DiceView(n: leftDiceNumber) //⭐️⭐️⭐️⭐️⭐️
+                            DiceView(n: rightDiceNumber) //⭐️⭐️⭐️⭐️⭐️
+                        }
+                        .padding(.horizontal)
+                        Spacer()
+                        Button {
+                            self.leftDiceNumber = Int.random(in: 1...6)
+                            self.rightDiceNumber = Int.random(in: 1...6)
+                        } label: {
+                            Text("Roll")
+                                .font(.system(size: 50))
+                                .fontWeight(.heavy)
+                                .foregroundColor(.white)
+                                .padding(.horizontal)
+                        }
+                        .background(Color.red)
+                        .padding(.bottom)
+    
+                    }
+                }
+            }
+            
+        }
+    }
+    ```
+    
+
 ## Name Card
 <img src="https://github.com/ryan2414/Study_Swift_Angela/assets/75060346/33dc21b6-4340-4351-949f-c0eb582381a6" width="25%" height="25%">
 
