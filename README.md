@@ -1,6 +1,66 @@
 # Study_Swift_Angela
 # 공부한 것들 
 
+## H4X0R_News
+
+- 웹뷰 추가하기
+    
+    ```swift
+    import WebKit
+    import SwiftUI
+    
+    struct WebView: UIViewRepresentable {
+        let urlString: String?
+        
+        func makeUIView(context: Context) -> WKWebView {
+            return WKWebView()
+        }
+        
+        func updateUIView(_ uiView: WKWebView, context: Context) {
+            if let safeString = urlString {
+                if let url = URL(string: safeString) {
+                    let request = URLRequest(url: url)
+                    uiView.load(request)
+                }
+            }
+        }
+    }
+    ```
+    
+- 네트워킹
+    
+    ```swift
+    class NetworkManager: ObservableObject {
+        
+        @Published var posts = [Post]() //⭐️옵져버 패턴
+        
+        func fetchData() {
+            if let url = URL(string: "http://hn.algolia.com/api/v1/search?tags=front_page") {
+                let session = URLSession(configuration: .default)
+                let task = session.dataTask(with: url) { data, response, error in
+                    if error == nil {
+                        let decoder = JSONDecoder()
+                        if let safeData = data {
+                            do {
+                                let result = try decoder.decode(Results.self, from: safeData)
+                                DispatchQueue.main.async {
+                                    self.posts = result.hits
+                                }
+                                
+                            } catch {
+                                print(error)
+                            }
+                            
+                        }
+                        
+                    }
+                }
+                task.resume()
+            }
+        }
+    }
+    ```
+
 ## Dicee
 <img src="https://github.com/ryan2414/ryan2414/assets/75060346/781bf801-c9f2-4151-9faf-dcef6db83e1d" width="25%" height="25%">
 
