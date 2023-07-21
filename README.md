@@ -2,6 +2,7 @@
 # 공부한 것들 
 
 ## H4X0R_News
+<img src="https://github.com/ryan2414/Study_Swift_Angela/assets/75060346/6a070c9b-2926-47ea-9681-e3a5220fc5c1" width="25%" height="25%">
 
 - 웹뷰 추가하기
     
