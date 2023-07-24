@@ -1,6 +1,36 @@
 # Study_Swift_Angela
 # 공부한 것들 
 
+## Todoey
+<img src="https://github.com/ryan2414/Study_Swift_Angela/assets/75060346/6a070c9b-2926-47ea-9681-e3a5220fc5c1" width="25%" height="25%">
+
+- UserDefaults
+    - Unity의 Playerpref와 비슷 하다
+    - 앱의 Library → Preferences → .plist 형태로 저장 됨
+    
+    ```swift
+    import UIKit
+    
+    let defaults = UserDefaults.standard
+    
+    let dicKey = "myDictionary"
+    
+    defaults.set(0.24, forKey: "Volume")
+    defaults.set(true, forKey: "MusicOn")
+    defaults.set("Jerry", forKey: "PlayerName")
+    defaults.set(Date(), forKey: "AppLastOpenedByUser")
+    let array = [1, 2, 3]
+    defaults.set(array, forKey: "myArray")
+    let dictionary = ["name": "Jerry"]
+    defaults.set(dictionary, forKey: dicKey)
+    
+    let volume = defaults.float(forKey: "Volume")
+    let appLastOpen = defaults.object(forKey: "AppLastOpenedByUser")
+    let myArray = defaults.array(forKey: "myArray") as! [Int]
+    let myDic = defaults.dictionary(forKey: dicKey)
+    ```
+    
+
 ## H4X0R_News
 <img src="https://github.com/ryan2414/Study_Swift_Angela/assets/75060346/6a070c9b-2926-47ea-9681-e3a5220fc5c1" width="25%" height="25%">
 
