@@ -2,7 +2,7 @@
 # 공부한 것들 
 
 ## Todoey
-<img src="https://github.com/ryan2414/Study_Swift_Angela/assets/75060346/6a070c9b-2926-47ea-9681-e3a5220fc5c1" width="25%" height="25%">
+<img src="https://github.com/ryan2414/Study_Swift_Angela/assets/75060346/ccc2e0ec-a55a-438a-8b90-fe0ecb622eb8" width="25%" height="25%">
 
 - UserDefaults
     - Unity의 Playerpref와 비슷 하다
