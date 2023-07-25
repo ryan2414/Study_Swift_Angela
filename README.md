@@ -7,6 +7,23 @@
 - UserDefaults
     - Unity의 Playerpref와 비슷 하다
     - 앱의 Library → Preferences → .plist 형태로 저장 됨
+    - UserDefaults는 사용자의 정보를 저장하는 싱글톤 인스턴스이다.
+    - UserDefaults는 사용자 기본 설정과 같은 **단일 데이터 값**에 적합합니다.
+    - 표준 유형의 데이터만 사용 가능. 사용자 지정 유형 사용 불가.
+    
+    ### 장점
+    
+    - UserDefaults는 사용하기 쉽다.
+    - Thread safe하다. (동기화 적정 없이 어떤 쓰레드에서든 읽고 쓸 수 있다.)
+    - UserDefault는 앱과 앱 extensions에서 공유된다.
+    
+    ### 단점
+    
+    - 동일한 키의 값을 쉽게 재정의 할 수 있습니다 (키 충돌 가능성).
+    - UserDefaults는 암호화되지 않습니다.
+    - Unit Test 시 UserDefault는 잘못된 값을 일으킬 수 있습니다.
+    - UserDefaults는 앱의 어느 곳에서나 전역적으로 변경 될 수 있으므로 inconsistent한 상태에서 쉽게 실행할 수 있습니다.
+    - 간단한 사용자 정보를 저장 및 불러오는게 가능하지만,내부적으로 plist 파일에 저장되기 때문에 보안상 강력하지는 않다.
     
     ```swift
     import UIKit
@@ -29,6 +46,38 @@
     let myArray = defaults.array(forKey: "myArray") as! [Int]
     let myDic = defaults.dictionary(forKey: dicKey)
     ```
+    
+- NSCoder
+    - 사용자 지정 유형 사용 가능.
+      
+    ```swift
+    let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Items.plist")
+    
+    func saveItems() {
+            let encoder = PropertyListEncoder()
+            do {
+                let data = try encoder.encode(itemArray)
+                try data.write(to: dataFilePath!)
+            } catch {
+                print(error)
+            }
+            
+            self.tableView.reloadData()
+        }
+        
+        func loaditems() {
+            if let data = try? Data(contentsOf: dataFilePath!) {
+                let decoder = PropertyListDecoder()
+                do {
+                    itemArray = try decoder.decode([Item].self, from: data)
+                } catch {
+                    print(error)
+                }
+                
+            }
+        }
+    ```
+
     
 
 ## H4X0R_News
