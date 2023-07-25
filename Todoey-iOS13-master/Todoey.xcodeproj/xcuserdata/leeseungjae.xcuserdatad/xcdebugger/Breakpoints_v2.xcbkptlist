@@ -8,7 +8,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A3067123-F64C-4AE6-AB89-3C6FADBB5B81"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Todoey/TodoListViewController.swift"
@@ -18,6 +18,68 @@
             endingLineNumber = "15"
             landmarkName = "TodoListViewController"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "A3067123-F64C-4AE6-AB89-3C6FADBB5B81 - 8e70a17085c8a524"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Todoey.TodoListViewController.defaults.getter : __C.NSUserDefaults"
+                  moduleName = "Todoey"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leeseungjae/Study_Swift_Angela/Todoey-iOS13-master/Todoey/TodoListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "A3067123-F64C-4AE6-AB89-3C6FADBB5B81 - 63d4a3251c62bc8d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Todoey.TodoListViewController.init(style: __C.UITableViewStyle) -&gt; Todoey.TodoListViewController"
+                  moduleName = "Todoey"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leeseungjae/Study_Swift_Angela/Todoey-iOS13-master/Todoey/TodoListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "272">
+               </Location>
+               <Location
+                  uuid = "A3067123-F64C-4AE6-AB89-3C6FADBB5B81 - 8f36e882844ecfb7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Todoey.TodoListViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Todoey.TodoListViewController"
+                  moduleName = "Todoey"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leeseungjae/Study_Swift_Angela/Todoey-iOS13-master/Todoey/TodoListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "296">
+               </Location>
+               <Location
+                  uuid = "A3067123-F64C-4AE6-AB89-3C6FADBB5B81 - 18372cb83abc73f3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Todoey.TodoListViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Todoey.TodoListViewController&gt;"
+                  moduleName = "Todoey"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leeseungjae/Study_Swift_Angela/Todoey-iOS13-master/Todoey/TodoListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "272">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
