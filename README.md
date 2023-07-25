@@ -54,28 +54,28 @@
     let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Items.plist")
     
     func saveItems() {
-            let encoder = PropertyListEncoder()
+        let encoder = PropertyListEncoder()
+        do {
+            let data = try encoder.encode(itemArray)
+            try data.write(to: dataFilePath!)
+        } catch {
+            print(error)
+        }
+        
+        self.tableView.reloadData()
+    }
+    
+    func loaditems() {
+        if let data = try? Data(contentsOf: dataFilePath!) {
+            let decoder = PropertyListDecoder()
             do {
-                let data = try encoder.encode(itemArray)
-                try data.write(to: dataFilePath!)
+                itemArray = try decoder.decode([Item].self, from: data)
             } catch {
                 print(error)
             }
             
-            self.tableView.reloadData()
         }
-        
-        func loaditems() {
-            if let data = try? Data(contentsOf: dataFilePath!) {
-                let decoder = PropertyListDecoder()
-                do {
-                    itemArray = try decoder.decode([Item].self, from: data)
-                } catch {
-                    print(error)
-                }
-                
-            }
-        }
+    }
     ```
 
     
